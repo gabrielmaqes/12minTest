@@ -1,13 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 
-import BooksList from './src/pages/BooksList';
+import HomeStack from './src/routes/PagesStack';
 
 export default function App() {
   return (
     <>
-      <BooksList />
-      <StatusBar style="auto" />
+      <HomeStack />
+      <StatusBar style="light" />
     </>
   );
 }

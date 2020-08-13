@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add axios
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add expo-av@~8.2.1
 
 PATH: 
   C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Broadcom\Broadcom 802.11\Driver;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Git\cmd;C\:MinGW\bin;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\MongoDB\Server\4.2\bin;C:\Program Files\Java\jdk-14.0.1\bin;C:\gradle-6.5\bin;C:\apache-maven-3.6.3\bin;C:\Program Files (x86)\Yarn\bin;C:\Users\Claudiney\anaconda3;C:\Users\Claudiney\anaconda3\Library\mingw-w64\bin;C:\Users\Claudiney\anaconda3\Library\usr\bin;C:\Users\Claudiney\anaconda3\Library\bin;C:\Users\Claudiney\anaconda3\Scripts;C:\MinGW\bin;C:\Users\Claudiney\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Claudiney\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.1.2\bin;;C:\Users\Claudiney\AppData\Roaming\Python\Python37\Scripts;C:\Users\Claudiney\AppData\Local\Yarn\bin
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\Claudiney\Desktop\ECP\Projetos\12minTest\mobile\node_modules\@babel\compat-data\node_modules\.bin'
+  Error: EPERM: operation not permitted, unlink 'C:\Users\Claudiney\Desktop\ECP\Projetos\12minTest\mobile\node_modules\@babel\generator\node_modules\.bin'
 
 npm manifest: 
   {
@@ -27,6 +27,7 @@ npm manifest:
       "eject": "expo eject"
     },
     "dependencies": {
+      "axios": "^0.19.2",
       "expo": "~38.0.8",
       "expo-status-bar": "^1.0.2",
       "react": "~16.11.0",
@@ -1570,6 +1571,13 @@ Lockfile:
     dependencies:
       array-filter "^1.0.0"
   
+  axios@^0.19.2:
+    version "0.19.2"
+    resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
+    integrity sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==
+    dependencies:
+      follow-redirects "1.5.10"
+  
   babel-plugin-dynamic-import-node@^2.3.3:
     version "2.3.3"
     resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node/-/babel-plugin-dynamic-import-node-2.3.3.tgz#84fda19c976ec5c6defef57f9427b3def66e17a3"
@@ -2144,6 +2152,13 @@ Lockfile:
     version "2.6.9"
     resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
     integrity sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==
+    dependencies:
+      ms "2.0.0"
+  
+  debug@=3.1.0:
+    version "3.1.0"
+    resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
+    integrity sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==
     dependencies:
       ms "2.0.0"
   
@@ -2754,6 +2769,13 @@ Lockfile:
     dependencies:
       locate-path "^5.0.0"
       path-exists "^4.0.0"
+  
+  follow-redirects@1.5.10:
+    version "1.5.10"
+    resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
+    integrity sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ==
+    dependencies:
+      debug "=3.1.0"
   
   fontfaceobserver@^2.1.0:
     version "2.1.0"

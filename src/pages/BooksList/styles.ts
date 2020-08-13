@@ -3,15 +3,12 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-      paddingTop: 40,
-      paddingHorizontal: 12
+      backgroundColor: '#f4f3ee'
     },
 
-    bookList: {
-      width:'100%'
+    booksList: {
+      marginTop: 16,
+      borderRadius: 12
     }
 });
 

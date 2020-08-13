@@ -3,9 +3,10 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#FFF',
-        borderWidth: 1,
-        borderRadius: 8,
+        borderBottomWidth: 2,
         borderColor: '#e6e6f0',
+        borderRadius: 12,
+        paddingLeft: 16,
         marginBottom: 12,
         overflow: 'hidden'
     },
@@ -13,12 +14,15 @@ const styles = StyleSheet.create({
     profile: {
         flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'space-between',
+        marginVertical: 16,
+        width: '100%',
     },
 
     thumb: {
         width: 96,
         height: 96,
-        borderRadius: 8
+        borderRadius: 16
     },
 
     profileInfo: {
@@ -26,11 +30,15 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        fontSize: 20,
-        color: '#32264d'
+        fontSize: 18,
+        width: 220,
+        fontWeight: 'bold',
+        color: '#36213e',
     },
 
-    tagline: {
+    author: {
+        fontSize: 14,
+        color: '#8d99ae',
         marginTop: 8
     }
 });
