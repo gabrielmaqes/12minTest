@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import { ScrollView, RectButton, BorderlessButton } from 'react-native-gesture-handler';
+import { ScrollView, BorderlessButton, TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import { View, Text, Image } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import axios from 'axios';
 
-import styles from './styles';
 import PageHeader from '../../components/PageHeader';
 import { DetailProps } from '../../@types/types';
+
+import styles from './styles';
 
 const BookDetail: React.FC<DetailProps> = ({route}) => {
     const bookId = route?.params?.id;
     const bookIndex = bookId - 1;
     const [selectedBookDetail, setSelectedBookDetail] = useState<any>([]);
     
-    const navigation = useNavigation()
-    
+    const navigation = useNavigation()    
 
     function loadDetailPage() {
         axios.get('https://run.mocky.io/v3/96f0177a-118f-43b8-9c99-e84e3dc3fa81')
@@ -23,8 +23,9 @@ const BookDetail: React.FC<DetailProps> = ({route}) => {
                 const book = response.data;
                 const bookData = book.data;
 
-                setSelectedBookDetail(bookData[bookIndex])
-            })
+                setSelectedBookDetail(bookData[bookIndex]);
+            }
+        )
     }
 
     useEffect(() => {
@@ -34,7 +35,7 @@ const BookDetail: React.FC<DetailProps> = ({route}) => {
     function handleGoBackToBookList() {
         navigation.navigate('BooksList');
     }
-
+    
     return (
         <View style={styles.container}>
             <PageHeader iconName="audiobook">
@@ -45,10 +46,13 @@ const BookDetail: React.FC<DetailProps> = ({route}) => {
             <ScrollView >
                 <Image source={{uri: selectedBookDetail.medium_image_url}} style={styles.image} />
                 <View style={styles.detailBody}>     
-                    <RectButton style={styles.listenBookButtonContainer} onPress={() => navigation.navigate('AudioPlayer', {audio_url: selectedBookDetail.audio_url, cover_image_url: selectedBookDetail.cover_image_url})}>
+                    <TouchableOpacity 
+                        style={styles.listenBookButtonContainer} 
+                        onPress={() => navigation.navigate('AudioPlayer', {bookInfo: selectedBookDetail})}
+                    >
                         <Text style={styles.listenBookButtonText} >Ouvir agora</Text>
                         <Feather name='arrow-right' size={32} color='white' />                        
-                    </RectButton>
+                    </TouchableOpacity>
                     
                     <View style={styles.bookPrimaryInfo}>
                         <Text style={styles.title}>{selectedBookDetail.title}</Text>
@@ -64,6 +68,7 @@ const BookDetail: React.FC<DetailProps> = ({route}) => {
         </View>
         
     )
+      
 }
 
 export default BookDetail;

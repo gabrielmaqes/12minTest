@@ -26,12 +26,13 @@ const styles = StyleSheet.create({
 
     title: {
         fontSize: 22,
+        fontFamily: 'Poppins_400Regular',
         color: '#36213e',
-        maxWidth: '100%'
     },
 
     author: {
         fontSize: 16,
+        fontFamily: 'Roboto_400Regular',
         color: '#8d99ae'
     },
 
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         borderRadius: 8,
-        backgroundColor: '#c77dff',
+        backgroundColor: '#3c096c',
         paddingVertical: 12,
         paddingHorizontal: 26,
         marginBottom: 16
@@ -48,29 +49,33 @@ const styles = StyleSheet.create({
 
     listenBookButtonText: {
         fontSize: 20,
-        fontWeight: 'bold',
+        fontFamily: 'Poppins_700Bold',
         color: '#FFF'
     },
 
     bookSecondaryInfo: {
-        backgroundColor: '#c77dff',
+        backgroundColor: '#FFF',
         borderRadius: 12,
-        borderColor: '#d2d2cf',
-        borderWidth: 1,
-        padding: 32
+        paddingTop: 16,
+        paddingBottom: 24,
+        paddingHorizontal: 16
     },
 
     tagline: {
-        fontSize: 20,
-        fontWeight: '700',
-        color: '#f8f7ff',
-        marginBottom: 20
+        fontSize: 18,
+        fontFamily: 'Poppins_600SemiBold',
+        color: '#36213e',
+        marginBottom: 20,
+        borderColor: '#8d99ae',
+        borderBottomWidth: 1,
+        
     },
 
     description: {
         fontSize: 16,
-        fontWeight: '600',
-        color: '#f8f7ff',
+        fontFamily: 'Roboto_400Regular',
+        textAlign: 'justify',
+        color: '#403d39',
     }
 });
 

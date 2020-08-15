@@ -1,33 +1,13 @@
 import React from 'react';
-import { NavigationContainer, RouteProp } from '@react-navigation/native';
-import { createStackNavigator, StackNavigationProp } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import BooksList from '../pages/BooksList';
 import BookDetail from '../pages/Detail';
-import AudioPlayer from '../components/AudioPlayer/';
+import AudioPlayer from '../pages/AudioPlayer';
+import { StackParamList } from '../@types/types';
 
-type RootStackParamList = {
-    BooksList: undefined;
-    Detail: { id: number };
-    AudioPlayer: { audio_url: string };
-};
-
-type AudioPlayerScreenRouteProp = RouteProp<
-    RootStackParamList,
-    'AudioPlayer'
->;
-
-type AudioPlayerScreenNavigatorProp = StackNavigationProp<
-    RootStackParamList,
-    'AudioPlayer'
->;
-
-type Props = {
-    route: AudioPlayerScreenRouteProp,
-    navigation: AudioPlayerScreenNavigatorProp;
-};
-
-const {Navigator, Screen} = createStackNavigator<RootStackParamList>();
+const {Navigator, Screen} = createStackNavigator<StackParamList>();
 
 function HomeStack() {
     return (

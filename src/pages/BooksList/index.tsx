@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { View, ScrollView } from 'react-native';
-import styles from './styles';
 
 import BookItem, { Book } from '../../components/BookItem';
 import PageHeader from '../../components/PageHeader';
 import axios from 'axios';
 
+import styles from './styles';
 
 function BooksList() {
     const [books, setBooks] = useState([]);

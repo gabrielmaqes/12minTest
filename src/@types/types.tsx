@@ -4,7 +4,7 @@ import { RouteProp } from '@react-navigation/native';
 export type StackParamList = {
     BooksList: undefined;
     Detail: { id: number };
-    AudioPlayer: { audio_url: string, cover_image_url: string };
+    AudioPlayer: { bookInfo: any };
 };
 
 type DetailScreenRouteProp = RouteProp<

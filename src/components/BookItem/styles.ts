@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         paddingLeft: 16,
         marginBottom: 12,
-        overflow: 'hidden'
+        overflow: 'hidden',        
     },
 
     profile: {
@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         marginVertical: 16,
-        width: '100%',
     },
 
     thumb: {
@@ -27,17 +26,20 @@ const styles = StyleSheet.create({
 
     profileInfo: {
         marginLeft: 24,
+        height: 96,
+        justifyContent: 'space-evenly'
     },
 
     title: {
-        fontSize: 18,
         width: 220,
-        fontWeight: 'bold',
+        fontSize: 16,
+        fontFamily: 'Poppins_600SemiBold',
         color: '#36213e',
     },
 
     author: {
         fontSize: 14,
+        fontFamily: 'Roboto_400Regular',
         color: '#8d99ae',
         marginTop: 8
     }
