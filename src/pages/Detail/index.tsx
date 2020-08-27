@@ -38,11 +38,11 @@ const BookDetail: React.FC<DetailProps> = ({route}) => {
     
     return (
         <View style={styles.container}>
-            <PageHeader iconName="audiobook">
+            <PageHeader headerAction={(
                 <BorderlessButton onPress={handleGoBackToBookList}>
                     <Feather name="arrow-left" size={36} color="white" />
-                </BorderlessButton>
-            </PageHeader>
+                </BorderlessButton>)}
+            />
             <ScrollView >
                 <Image source={{uri: selectedBookDetail.medium_image_url}} style={styles.image} />
                 <View style={styles.detailBody}>     

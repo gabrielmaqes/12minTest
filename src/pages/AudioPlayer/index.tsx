@@ -175,11 +175,13 @@ export default class AudioPlayer extends React.Component<AudioProps> {
 			} else {
 			return (
 				<>
-					<PageHeader iconName="book-open-page-variant">
+					<PageHeader headerAction={(
 						<BorderlessButton onPress={() => this.props.navigation.goBack()}>
 							<Feather name="arrow-left" size={36} color="white" />
 						</BorderlessButton>
-					</PageHeader>
+					)}
+					/>
+
 					<ImageBackground 
 						source={{uri: this.props.route.params.bookInfo.cover_image_url}} 
 						style={styles.backgroundImage} 
