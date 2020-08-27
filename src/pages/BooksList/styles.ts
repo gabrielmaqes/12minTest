@@ -9,6 +9,19 @@ const styles = StyleSheet.create({
     booksList: {
       marginTop: 16,
       borderRadius: 12
+    },
+
+    searchForm: {
+      marginVertical: 32, 
+    },
+
+    input: {
+      height: 54,
+      backgroundColor: '#FFF',
+      borderRadius: 8,
+      justifyContent: 'center',
+      paddingHorizontal: 16,
+      marginTop: 4
     }
 });
 

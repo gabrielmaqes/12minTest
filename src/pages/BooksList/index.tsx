@@ -42,8 +42,9 @@ function BooksList() {
             )}            
             >
                 { isFilterVisible && (
-                    <View>
+                    <View style={styles.searchForm}>
                         <TextInput
+                            style={styles.input}
                             onChangeText={(text) => setTextInput(text)}
                             placeholder={"Search your favorite books"}
                         />
